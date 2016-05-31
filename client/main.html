@@ -4,6 +4,27 @@
 
 <body>
   <h1>Welcome to Meteor!</h1>
+  <table>
+      <thead>
+        <tr>
+            <th>FlowRate</th>
+            <th>Time</th>
+        </tr>
+      </thead>
+      {{> FlowRate }}
+  </table>
 
 </body>
 
+
+<template name="FlowRate">
+    {{#each getFlowRate}}
+        <tr>
+            <td>{{FlowRate}}</td>
+            <td>{{DateofInsert}}</td>
+        </tr>
+    {{/each}}
+</template>
+
+
+<template name="FlowPerHour"></template>
